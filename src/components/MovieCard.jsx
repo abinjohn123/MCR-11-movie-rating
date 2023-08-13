@@ -1,8 +1,10 @@
+import { useNavigate } from 'react-router';
 import { useAppContext } from '../AppContext';
 
 const MovieCard = ({ movie }) => {
   const { id, title, summary, imageURL } = movie;
   const { starred, setStarred, watchLater, setWatchLater } = useAppContext();
+  const navigate = useNavigate();
 
   const isMovieStarred = starred.some((starredId) => id === starredId);
   const isMovieInWatchLater = watchLater.some(
@@ -24,7 +26,7 @@ const MovieCard = ({ movie }) => {
     );
 
   return (
-    <div className="movie-card">
+    <div className="movie-card" onClick={() => navigate(`/movies/${id}`)}>
       <div className="img-container">
         <img src={imageURL} alt={title} />
       </div>
@@ -34,7 +36,7 @@ const MovieCard = ({ movie }) => {
         </div>
         <p className="summary">{summary}</p>
       </div>
-      <div className="d-flex-c-s p16">
+      <div className="d-flex-c-s p16" onClick={(e) => e.stopPropagation()}>
         <button className="card-btn" onClick={handleStarClick}>
           {isMovieStarred ? 'Starred' : 'Star'}
         </button>

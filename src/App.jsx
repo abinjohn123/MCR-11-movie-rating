@@ -5,6 +5,7 @@ import { useAppContext } from './AppContext';
 import Header from './components/Header';
 import Home from './components/Home';
 import StarWatchLater from './components/StarWatchlater';
+import SingleMovie from './components/SingleMovie';
 import { SUBPAGE_MAPPING } from './constants';
 import './styles/App.scss';
 
@@ -26,6 +27,7 @@ function App() {
           path="/watch-later"
           element={<StarWatchLater type={SUBPAGE_MAPPING.WATCH_LATER.type} />}
         />
+        <Route path="/movies/:movieId" element={<SingleMovie />} />
       </Routes>
     </>
   );
