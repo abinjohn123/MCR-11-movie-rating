@@ -1,0 +1,75 @@
+@mixin spacing($space) {
+  // margins
+  .mt#{$space} {
+    margin-top: #{$space}px;
+  }
+  .mr#{$space} {
+    margin-right: #{$space}px;
+  }
+  .mb#{$space} {
+    margin-bottom: #{$space}px;
+  }
+  .ml#{$space} {
+    margin-left: #{$space}px;
+  }
+  .mx#{$space} {
+    margin-left: #{$space}px;
+    margin-right: #{$space}px;
+  }
+  .my#{$space} {
+    margin-top: #{$space}px;
+    margin-bottom: #{$space}px;
+  }
+
+  // padding
+  .p#{$space} {
+    padding: #{$space}px;
+  }
+  .pt#{$space} {
+    padding-top: #{$space}px;
+  }
+  .pr#{$space} {
+    padding-right: #{$space}px;
+  }
+  .pb#{$space} {
+    padding-bottom: #{$space}px;
+  }
+  .pl#{$space} {
+    padding-left: #{$space}px;
+  }
+  .px#{$space} {
+    padding-left: #{$space}px;
+    padding-right: #{$space}px;
+  }
+  .py#{$space} {
+    padding-top: #{$space}px;
+    padding-bottom: #{$space}px;
+  }
+
+  .gap#{$space} {
+    gap: #{$space}px;
+  }
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.d-flex-c-s {
+  @extend .d-flex;
+  justify-content: space-between;
+}
+
+.d-flex-c-start {
+  @extend .d-flex;
+  justify-content: flex-start;
+}
+
+.cur-p {
+  cursor: pointer;
+}
+.cur-default {
+  cursor: default;
+}
