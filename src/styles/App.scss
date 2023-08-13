@@ -1,1 +1,31 @@
 @import './reuse';
+@import '@radix-ui/colors/violet.css';
+@import '@radix-ui/colors/slate.css';
+
+.app-header {
+  background-color: var(--violet-12);
+  color: var(--violet-1);
+}
+
+.global-search {
+  flex-grow: 1;
+  max-width: 460px;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  background-color: var(--violet-7);
+  font-family: 'Inter', sans-serif;
+}
+.app-nav {
+  a {
+    padding: 4px 8px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--violet-8);
+
+    &.active {
+      color: var(--violet-1);
+      background-color: var(--violet-11);
+    }
+  }
+}
