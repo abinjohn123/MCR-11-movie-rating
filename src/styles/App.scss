@@ -29,3 +29,44 @@
     }
   }
 }
+
+.movie-card {
+  width: 320px;
+  height: 500px;
+  background-color: var(--violet-4);
+  border-radius: 6px;
+
+  .img-container {
+    width: 100%;
+    height: 300px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+    }
+  }
+
+  .summary {
+    display: -webkit-box; /* Necessary to use the line-clamp property */
+    -webkit-box-orient: vertical; /* Controls the direction of the children along the flexbox/container */
+    -webkit-line-clamp: 4; /* Number of lines to display */
+    overflow: hidden;
+  }
+
+  .card-btn {
+    cursor: pointer;
+    background-color: var(--violet-7);
+    padding: 4px 8px;
+    font-weight: 600;
+    border-radius: 6px;
+
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: var(--violet-8);
+    }
+  }
+}

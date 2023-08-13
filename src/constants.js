@@ -7,7 +7,7 @@ export const LOCAL_STORAGE_KEYS = {
 export const moviesData = [
   {
     id: '73334b93-80c6-4388-b5e3-abde40a71b9f',
-    title: 'Redemption',
+    title: 'Shawshank Redemption',
     year: 1994,
     genre: ['Drama'],
     rating: 9,
