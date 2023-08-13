@@ -4,6 +4,17 @@ export const LOCAL_STORAGE_KEYS = {
   STARRED: 'neog_mcr_11_starred',
 };
 
+export const SUBPAGE_MAPPING = {
+  STARRED: {
+    title: 'Starred',
+    type: 'starred',
+  },
+  WATCH_LATER: {
+    title: 'Watch Later',
+    type: 'watch_later',
+  },
+};
+
 export const moviesData = [
   {
     id: '73334b93-80c6-4388-b5e3-abde40a71b9f',

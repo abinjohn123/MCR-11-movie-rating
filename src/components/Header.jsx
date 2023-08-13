@@ -11,7 +11,7 @@ const Header = () => {
       />
       <div className="d-flex gap8 app-nav">
         <NavLink to="/">Movies</NavLink>
-        <NavLink to="/watch-list">Watch list</NavLink>
+        <NavLink to="/watch-later">Watch Later</NavLink>
         <NavLink to="/starred">Starred</NavLink>
       </div>
     </div>
