@@ -15,6 +15,51 @@ export const SUBPAGE_MAPPING = {
   },
 };
 
+export const GENRE_FILTER_MAPPING = [
+  {
+    label: 'All Genres',
+    value: 'all',
+  },
+  {
+    label: 'Drama',
+    value: 'drama',
+  },
+  {
+    label: 'Crime',
+    value: 'crime',
+  },
+  {
+    label: 'Action',
+    value: 'action',
+  },
+  {
+    label: 'Adventure',
+    value: 'adventure',
+  },
+  ,
+  {
+    label: 'Fantasy',
+    value: 'fantasy',
+  },
+  {
+    label: 'Romance',
+    value: 'romance',
+  },
+  {
+    label: 'Sci-Fi',
+    value: 'sci-fi',
+  },
+  {
+    label: 'Biography',
+    value: 'biography',
+  },
+];
+
+export const MOVIE_YEAR_FILTER = {
+  START: 1990,
+  END: 2024,
+};
+
 export const moviesData = [
   {
     id: '73334b93-80c6-4388-b5e3-abde40a71b9f',
