@@ -4,6 +4,7 @@ import { moviesData, LOCAL_STORAGE_KEYS } from './constants';
 const AppContext = createContext({});
 
 const AppProvider = ({ children }) => {
+  const [searchInput, setSearchInput] = useState('');
   const [movies, setMovies] = useState(
     JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEYS.MOVIES)) ?? moviesData
   );
@@ -27,8 +28,24 @@ const AppProvider = ({ children }) => {
     setStarred(data);
   };
 
+  const getSearchResults = () => {
+    let searchResults = [...movies];
+    const searchQuery = searchInput.trim().toLowerCase();
+    if (searchQuery)
+      searchResults = movies.filter(
+        (movie) =>
+          movie.title.toLowerCase().includes(searchQuery) ||
+          movie.director.toLowerCase().includes(searchQuery) ||
+          movie.cast.join(' ').toLowerCase().includes(searchQuery)
+      );
+
+    return searchResults;
+  };
+
   const contextValue = {
-    movies,
+    searchInput,
+    setSearchInput,
+    movies: getSearchResults(),
     watchLater,
     starred,
     setMovies: setLocalStorageMovies,

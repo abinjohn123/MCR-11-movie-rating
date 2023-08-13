@@ -1,5 +1,7 @@
-import { Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 
+import { useAppContext } from './AppContext';
 import Header from './components/Header';
 import Home from './components/Home';
 import StarWatchLater from './components/StarWatchlater';
@@ -7,6 +9,10 @@ import { SUBPAGE_MAPPING } from './constants';
 import './styles/App.scss';
 
 function App() {
+  const location = useLocation();
+  const { setSearchInput } = useAppContext();
+
+  useEffect(() => setSearchInput(''), [location.pathname]);
   return (
     <>
       <Header />
