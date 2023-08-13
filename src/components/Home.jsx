@@ -9,7 +9,7 @@ const Home = () => {
     <div className="p32">
       <div className="d-flex-c-start gap24 f-wrap">
         {movies.map((movie) => (
-          <MovieCard movie={movie} />
+          <MovieCard key={movie.id} movie={movie} />
         ))}
       </div>
     </div>
