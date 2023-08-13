@@ -17,18 +17,20 @@ function App() {
   return (
     <>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route
-          path="/starred"
-          element={<StarWatchLater type={SUBPAGE_MAPPING.STARRED.type} />}
-        />
-        <Route
-          path="/watch-later"
-          element={<StarWatchLater type={SUBPAGE_MAPPING.WATCH_LATER.type} />}
-        />
-        <Route path="/movies/:movieId" element={<SingleMovie />} />
-      </Routes>
+      <div className="routes-container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/starred"
+            element={<StarWatchLater type={SUBPAGE_MAPPING.STARRED.type} />}
+          />
+          <Route
+            path="/watch-later"
+            element={<StarWatchLater type={SUBPAGE_MAPPING.WATCH_LATER.type} />}
+          />
+          <Route path="/movies/:movieId" element={<SingleMovie />} />
+        </Routes>
+      </div>
     </>
   );
 }
