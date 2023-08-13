@@ -1,5 +1,7 @@
 export const LOCAL_STORAGE_KEYS = {
   MOVIES: 'neog_mcr_11_movies',
+  WATCH_LATER: 'neog_mcr_11_watch_later',
+  STARRED: 'neog_mcr_11_starred',
 };
 
 export const moviesData = [
